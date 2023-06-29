@@ -55,6 +55,10 @@ const checkIn = async () => {
   bot.sendMessage(AUTH_USER_ID, `现在是 ${dateFormat()}\n记得上班打卡哦`);
 }
 
+const specialCheckIn = async () => {
+  bot.sendMessage(AUTH_USER_ID, `现在是 ${dateFormat()}\n今天调休,记得去上班哦`);
+}
+
 const checkOut = async () => {
   bot.sendMessage(AUTH_USER_ID, `现在是 ${dateFormat()}\n记得下班打卡哦`);
 }
@@ -63,4 +67,5 @@ module.exports = {
   getWeatherReport,
   checkIn,
   checkOut,
+  specialCheckIn,
 };
